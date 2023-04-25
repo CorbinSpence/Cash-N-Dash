@@ -25,6 +25,7 @@ router.get('/:id', async (req, res) => {
     })
     if(!categoryData){
       res.status(404).json({message:'Category id does not exist.'})
+      return;
     }
     res.status(200).json(categoryData)
   }catch(err){

@@ -25,6 +25,7 @@ router.get('/:id', async (req, res) => {
     })
     if(!tagData){
       res.status(404).json({message:'Tag id does not exist.'})
+      return
     }
     res.status(200).json(tagData)
   }catch(err){

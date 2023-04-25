@@ -11,9 +11,7 @@ ProductTag.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      validate:{
-        notNull: true
-      }
+      allowNull: false,
     },
     product_id:{
       type: DataTypes.INTEGER,
@@ -23,6 +21,7 @@ ProductTag.init(
       }
     },
     tag_id:{
+      type:DataTypes.INTEGER,
       references: {
         model:'tag',
         key:'id'
